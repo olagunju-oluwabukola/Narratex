@@ -11,9 +11,8 @@ import { RouterLink, RouterView } from 'vue-router'
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/stories">Stories</RouterLink>
         <RouterLink to="/Write">Write</RouterLink>
-
-        
       </nav>
+      
     </div>
   </header>
 
@@ -24,18 +23,18 @@ import { RouterLink, RouterView } from 'vue-router'
 .wrapper{
 display: flex;
 height: 10vh;
-background:rgb(61, 1, 61) ;
-color: rgb(230, 182, 230);
+color:rgb(61, 1, 61) ;
+background: rgb(230, 182, 230);
 }
 
 .text{
 font-style: oblique;
-margin-top: 0.3em;
-margin-left: 2em;
-margin-right: 2em;
+margin-top: 0.7em;
+margin-left: 1em;
+
 }
 .text span{
-  color: rgb(230, 182, 230);
+  color:rgb(61, 1, 61);
 }
 header {
 
@@ -58,7 +57,7 @@ nav {
 
 nav a.router-link-exact-active {
   color: rgb(71, 219, 12);
-  
+  text-decoration: underline;
 }
 
 nav a.router-link-exact-active:hover {
@@ -66,11 +65,12 @@ nav a.router-link-exact-active:hover {
 }
 
 nav a {
-  color: rgb(230, 182, 230);
+  color:rgb(61, 1, 61) ;
   display: inline-block;
   padding: 0 1rem;
   font-weight: bold;
   border-left: 1px solid var(--color-border);
+  text-decoration: none;
 }
 
 nav a:first-of-type {

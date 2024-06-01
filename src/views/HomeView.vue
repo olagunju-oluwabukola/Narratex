@@ -1,11 +1,12 @@
 <script>
-import StoriesSlotVue from '@/components/StoriesSlot.vue'
+
 import Faq from '../components/Faq.vue'
 import HeaderImg from '../components/HeaderImg.vue'
 import StoriesSlot from '../components/StoriesSlot.vue'
+import FooterComp from '../components/FooterComp.vue'
 
 export default {
-  components: { Faq, HeaderImg,StoriesSlot },
+  components: { Faq, HeaderImg,StoriesSlot, FooterComp},
   // beforeRouteLeave(to, from, next) {
 // if 'next' was not used after pressing cancelAnimationFrame, it will remain on the homepage, the use of 'next' makes navigation to the next page possible
 //next should only be used once unless the usage does not overlap
@@ -26,16 +27,21 @@ export default {
 <template>
  
  <HeaderImg/>
+
+ <div><h2>Posts</h2></div>
  
  <stories-slot class="slot-card">
-  <!-- <template #storyTitle></template>
-  <template v-slot:default></template> -->
  </stories-slot>
 
 <faq/>
+<FooterComp/>
 </template>
 
 <style scoped>
+h2{
+  margin-left: 1em;
+  font-size: 3em;
 
+}
 
 </style>
