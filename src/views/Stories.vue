@@ -1,22 +1,34 @@
 <template>
-  <div>
-    <h1>stories</h1>
+  <div> <h1>stories</h1> </div>
 
-  </div>
   <div >
     <div v-if="isLoading" class="spinner" >
     <div class="cube1"></div>
     <div class="cube2"></div>
   </div>
   <div v-for="item in post" :key="item.id">
-      <h2>Title:{{ item.title }}</h2>
 
-      <p>Body:{{ item.body }}</p>
+    <router-link
+    :to="{
+      name: 'Technology',
+      params: {title: item.title },
+      query: { name: item.title }
+    }">
+    <h2>{{ item.title }}</h2>
+    <p>{{ $route.params.title }}</p>
+
+  </router-link>
+
+<!-- <h2>Title:{{ item.title }}</h2>
+
+<p> -->
   </div>
   <div> 
     </div>
     
   </div>
+
+ 
 </template>
 
 <script>
@@ -33,23 +45,30 @@ export default {
   },
 
 
-mounted(){
-  //  console.log('Child mounted()')    
+mounted(){   
   this.isLoading = true,
   fetch('http://localhost:3000/blog1')
     .then(response => response.json())
         .then(data => {
           this.post = data
         this.isLoading = false
-        }
+        },
        
-      )  
-
+      )
 },
 methods:{
-
- 
-},
+//  async fetchPosts(){
+//   this.isLoading = true;
+//   try{
+//     const response = await fetch('http://localhost:3000/Health');
+//     const data = await response.json();
+//     this.post = data.post
+//   }
+//   finally{
+//     this.isLoading = false
+//   }
+//  }
+}
 
 }
 </script>

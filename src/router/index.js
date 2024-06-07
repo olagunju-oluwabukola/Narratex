@@ -38,6 +38,12 @@ const router = createRouter({
         name: 'write',
         component: ()=>import('../views/Write.vue')
       },
+      {
+        path: '/stories/:title',
+        name: 'Technology',
+        component: () => import('../views/Technology.vue'),
+        props: true
+      },
     
     {
       path: '/:catchAll(.*)',

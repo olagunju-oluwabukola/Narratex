@@ -34,7 +34,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 footer{
     background: rgb(230, 182, 230);
 }
