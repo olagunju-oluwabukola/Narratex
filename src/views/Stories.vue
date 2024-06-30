@@ -1,5 +1,5 @@
 <template>
-  <div> <h1>stories</h1> </div>
+  <div> <h1>Available stories</h1> </div>
 
   <div >
     <div v-if="isLoading" class="spinner" >
@@ -11,17 +11,13 @@
     <router-link
     :to="{
       name: 'Technology',
-      params: {title: item.title },
-      query: { name: item.title }
+      params: {title: item.title},
+      query: { body: item.body, image: item.image}
     }">
-    <h2>{{ item.title }}</h2>
+    <h2 >🎯{{ item.title }}</h2>
     <p>{{ $route.params.title }}</p>
-
+  
   </router-link>
-
-<!-- <h2>Title:{{ item.title }}</h2>
-
-<p> -->
   </div>
   <div> 
     </div>
@@ -122,5 +118,25 @@ methods:{
     transform: rotate(-360deg);
     -webkit-transform: rotate(-360deg);
   }
+}
+
+h2{
+  font-size: 15px;
+  text-decoration: none;
+  color: #000000;
+  margin-left: 2em;
+  line-height: 2em;
+}
+a{
+  text-decoration: none;
+}
+
+h1{
+  margin: 20px 0 20px 2em;
+  
+}
+
+@media (max-width: 910px){
+
 }
 </style>

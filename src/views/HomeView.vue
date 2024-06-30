@@ -3,10 +3,8 @@
 import Faq from '../components/Faq.vue'
 import HeaderImg from '../components/HeaderImg.vue'
 import StoriesSlot from '../components/StoriesSlot.vue'
-import FooterComp from '../components/FooterComp.vue'
-
 export default {
-  components: { Faq, HeaderImg,StoriesSlot, FooterComp},
+  components: { Faq, HeaderImg,StoriesSlot},
   // beforeRouteLeave(to, from, next) {
 // if 'next' was not used after pressing cancelAnimationFrame, it will remain on the homepage, the use of 'next' makes navigation to the next page possible
 //next should only be used once unless the usage does not overlap
@@ -34,7 +32,7 @@ export default {
  </stories-slot>
 
 <faq/>
-<FooterComp/>
+
 </template>
 
 <style scoped>
